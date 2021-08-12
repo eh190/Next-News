@@ -1,12 +1,8 @@
-import Navbar from "../components/Navbar/Navbar";
-
 const Tech = () => {
   return (
     <>
-      <Navbar />
-      <div>
-        <h1>Tech NEWS</h1>
-      </div>
+      <h1 className="pageTitle">Tech NEWS</h1>
+      <div className="container"></div>
     </>
   );
 };

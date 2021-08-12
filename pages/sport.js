@@ -1,12 +1,8 @@
-import Navbar from "../components/Navbar/Navbar";
-
 const Sport = () => {
   return (
     <>
-      <Navbar />
-      <div>
-        <h1>SPORT NEWS</h1>
-      </div>
+      <h1 className="pageTitle">SPORT NEWS</h1>
+      <div className="container"></div>
     </>
   );
 };

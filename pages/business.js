@@ -1,12 +1,8 @@
-import Navbar from "../components/Navbar/Navbar";
-
 const Business = () => {
   return (
     <>
-      <Navbar />
-      <div>
-        <h1>Business NEWS</h1>
-      </div>
+      <h1 className="pageTitle">Business NEWS</h1>
+      <div className="container"></div>
     </>
   );
 };

@@ -1,12 +1,8 @@
-import Navbar from "../components/Navbar/Navbar";
-
 const UK = () => {
   return (
     <>
-      <Navbar />
-      <div>
-        <h1>UK NEWS</h1>
-      </div>
+      <h1 className="pageTitle">UK NEWS</h1>
+      <div className="container"></div>
     </>
   );
 };
