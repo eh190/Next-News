@@ -1,11 +1,11 @@
-import Navbar from "../components/Navbar";
+import Navbar from "../components/Navbar/Navbar";
 
 const Sport = () => {
   return (
     <>
       <Navbar />
       <div>
-        <h1>Business NEWS</h1>
+        <h1>SPORT NEWS</h1>
       </div>
     </>
   );
