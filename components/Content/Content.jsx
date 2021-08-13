@@ -21,7 +21,7 @@ const Content = (props) => {
     <>
       <div className={styles.container}>
         <BigStory leadStory={articles[0]} />
-        {articlesJSX}
+        <div className={styles.grid}>{articlesJSX}</div>
       </div>
     </>
   );

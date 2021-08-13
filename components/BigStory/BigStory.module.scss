@@ -1,7 +1,39 @@
 .card {
-  height: 250px;
+  box-shadow: 0 0 5px 1.5px rgb(182, 182, 182);
+  border-radius: 10px;
+  display: flex;
   width: 100%;
-  background: red;
-  border: 2px solid green;
-  margin-bottom: 20px;
+  position: relative;
+  margin-bottom: 15px;
+  height: 300px;
+  z-index: -1;
+
+  &:hover {
+    box-shadow: 0 0 5px 2.5px rgb(114, 114, 114);
+    cursor: pointer;
+  }
+
+  &__img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    filter: brightness(70%);
+  }
+
+  &__body {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    padding: 10px;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    color: white;
+  }
+
+  &__author {
+    color: #999999;
+    font-weight: 700;
+  }
 }

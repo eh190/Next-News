@@ -4,11 +4,14 @@ import Content from "../components/Content/Content";
 import styles from "../styles/Home.module.scss";
 
 export const getStaticProps = async () => {
-  const res = await fetch("https://newsapi.org/v2/top-headlines?country=gb", {
-    headers: {
-      Authorization: `Bearer ${process.env.NEXT_PUBLIC_NEWS_KEY}`,
-    },
-  });
+  const res = await fetch(
+    "https://newsapi.org/v2/top-headlines?country=gb&pageSize=19",
+    {
+      headers: {
+        Authorization: `Bearer ${process.env.NEXT_PUBLIC_NEWS_KEY}`,
+      },
+    }
+  );
 
   const data = await res.json();
 
