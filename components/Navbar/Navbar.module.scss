@@ -8,20 +8,22 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
 .main {
   width: 100%;
-  height: 200px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   color: #fff;
   align-items: center;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  position: fixed;
+  background: white;
 }
 
 .header {
   display: flex;
   align-items: center;
-  height: 100px;
+  height: 80px;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   background: #2b7a78;
 }
 
@@ -37,16 +39,12 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .links {
-  margin-bottom: 10px;
-  padding-bottom: 20px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   list-style-type: none;
   overflow-x: scroll;
   width: 100%;
-  scrollbar-width: thin;
-  scrollbar-color: blue orange;
 }
 
 .links__item {
@@ -55,7 +53,7 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
   text-transform: uppercase;
   text-decoration: none;
-  padding-bottom: 8px;
+
   padding: 5px;
 }
 

@@ -22,15 +22,6 @@ const Navbar = () => {
                 router.pathname === "/" ? styles.active : ""
               }`}
             >
-              Home
-            </a>
-          </Link>
-          <Link href="/uk">
-            <a
-              className={`${styles.links__item} ${
-                router.pathname === "/uk" ? styles.active : ""
-              }`}
-            >
               UK
             </a>
           </Link>

@@ -1,32 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap");
 
-* {
+*,
+*::before,
+* ::after {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  //Remove scrollbar visibility on Firefox
+  scrollbar-width: none;
 }
 
-* {
-  scrollbar-width: thin;
-  scrollbar-color: blue orange;
-}
-
+// Remove scrollbar visibility
 /* Works on Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-  width: 12px;
+  display: none;
 }
 
-*::-webkit-scrollbar-track {
-  background: orange;
-}
-
-*::-webkit-scrollbar-thumb {
-  background-color: blue;
-  border-radius: 20px;
-  border: 3px solid orange;
-}
-
-html,
 body {
   font-family: "News Cycle", sans-serif;
 }
@@ -40,23 +29,21 @@ li {
   list-style: none;
 }
 
+.main {
+  padding: 130px 5px 10px 5px;
+}
 .pageTitle {
   margin-left: 15px;
+  padding-bottom: 10px;
 }
 
-.container {
-  height: 80vh;
-  background-color: red;
-  margin: 25px 15px;
-  display: flex;
-  justify-content: flex-start;
+.line {
+  margin: 0px 15px;
+  border: 1px solid #333;
 }
 
 @media screen and (min-width: 900px) {
-  .pageTitle {
-    margin-left: 100px;
-  }
-  .container {
-    margin: 25px 100px;
+  .main {
+    margin: 0px 100px;
   }
 }
