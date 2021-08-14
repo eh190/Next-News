@@ -3,6 +3,16 @@ import Image from "next/image";
 import Content from "../components/Content/Content";
 import styles from "../styles/Home.module.scss";
 
+export default function Home({ data }) {
+  return (
+    <div className="main">
+      <h1 className="pageTitle">UK</h1>
+      <hr className="line" />
+      <Content data={data} />
+    </div>
+  );
+}
+
 export const getStaticProps = async () => {
   const res = await fetch(
     "https://newsapi.org/v2/top-headlines?country=gb&pageSize=19",
@@ -23,13 +33,3 @@ export const getStaticProps = async () => {
     revalidate: 60 * 60,
   };
 };
-
-export default function Home({ data }) {
-  return (
-    <div className="main">
-      <h1 className="pageTitle">UK</h1>
-      <hr className="line" />
-      <Content data={data} />
-    </div>
-  );
-}

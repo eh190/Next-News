@@ -43,8 +43,20 @@ li {
   border: 1px solid #333;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 992px) {
   .main {
     margin: 0px 100px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main {
+    margin: 0px 150px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .main {
+    margin: 0px 500px;
   }
 }

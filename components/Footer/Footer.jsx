@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div className={styles.footer}>
       <hr className={styles.footer__line} />
-      <p className={styles.footer__text}>Copyright NextNews 2021</p>
+      <p className={styles.footer__text}>NextNews 2021</p>
     </div>
   );
 };

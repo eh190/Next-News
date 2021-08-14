@@ -14,13 +14,15 @@ const BigStory = (props) => {
     leadStory.urlToImage === null ? "/static/Logo.png" : leadStory.urlToImage;
 
   return (
-    <div className={styles.card}>
-      <img src={imageSource} alt="" className={styles.card__img} />
-      <div className={styles.card__body}>
-        <h4 className={styles.card__title}>{title}</h4>
-        <p className={styles.card__author}>{author}</p>
+    <a href={leadStory.url} target="_blank" rel="noreferrer">
+      <div className={styles.card}>
+        <img src={imageSource} alt="" className={styles.card__img} />
+        <div className={styles.card__body}>
+          <h4 className={styles.card__title}>{title}</h4>
+          <p className={styles.card__author}>{author}</p>
+        </div>
       </div>
-    </div>
+    </a>
   );
 };
 
