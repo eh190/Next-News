@@ -1,9 +1,9 @@
 import Content from "../components/Content/Content";
 
-const Sport = ({ data }) => {
+const Health = ({ data }) => {
   return (
     <main className="main">
-      <h1 className="pageTitle">Sport News</h1>
+      <h1 className="pageTitle">Health News</h1>
       <hr className="line" />
       <Content data={data} />
     </main>
@@ -12,7 +12,7 @@ const Sport = ({ data }) => {
 
 export const getStaticProps = async () => {
   const res = await fetch(
-    "https://newsapi.org/v2/top-headlines?country=gb&category=sport&pageSize=16",
+    "https://newsapi.org/v2/top-headlines?country=gb&category=health&pageSize=16",
     {
       headers: {
         Authorization: `Bearer ${process.env.NEXT_PUBLIC_NEWS_KEY}`,
@@ -32,4 +32,4 @@ export const getStaticProps = async () => {
   };
 };
 
-export default Sport;
+export default Health;

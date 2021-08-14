@@ -30,6 +30,7 @@ li {
   list-style: none;
 }
 
+//classes assigned to individual pages structure
 .main {
   padding: 130px 5px 10px 5px;
 }
@@ -45,18 +46,18 @@ li {
 
 @media screen and (min-width: 992px) {
   .main {
-    margin: 0px 100px;
+    padding: 130px 100px 10px 100px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .main {
-    margin: 0px 150px;
+    padding: 130px 150px 10px 150px;
   }
 }
 
 @media screen and (min-width: 1600px) {
   .main {
-    margin: 0px 500px;
+    padding: 130px 500px 10px 500px;
   }
 }

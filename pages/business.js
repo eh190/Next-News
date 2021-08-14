@@ -1,5 +1,15 @@
 import Content from "../components/Content/Content";
 
+const Business = ({ data }) => {
+  return (
+    <main className="main">
+      <h1 className="pageTitle">Business News</h1>
+      <hr className="line" />
+      <Content data={data} />
+    </main>
+  );
+};
+
 export const getStaticProps = async () => {
   const res = await fetch(
     "https://newsapi.org/v2/top-headlines?country=gb&category=business&pageSize=10",
@@ -20,16 +30,6 @@ export const getStaticProps = async () => {
     //Refreshes the fetch every hour to rebuild page with new stories
     revalidate: 60 * 60,
   };
-};
-
-const Business = ({ data }) => {
-  return (
-    <main className="main">
-      <h1 className="pageTitle">Business NEWS</h1>
-      <hr className="line" />
-      <Content data={data} />
-    </main>
-  );
 };
 
 export default Business;

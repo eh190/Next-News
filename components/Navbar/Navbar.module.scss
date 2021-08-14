@@ -17,21 +17,26 @@ $grey: #999999;
 .header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: 80px;
   width: 100%;
   margin-bottom: 10px;
   background: $green;
-}
 
-.logo {
-  font-size: 2rem;
-  margin-left: 25px;
-  display: flex;
-  align-items: center;
-}
+  &__logo {
+    font-size: 2rem;
+    margin-left: 25px;
+    display: flex;
+    align-items: center;
+  }
 
+  &__date {
+    margin-right: 25px;
+  }
+}
 .links_container {
   width: 100%;
+  padding-right: 20px;
 }
 
 .links {
@@ -64,18 +69,18 @@ $grey: #999999;
 
 @media screen and (min-width: 992px) {
   .links {
-    margin-left: 100px;
+    padding-left: 100px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .links {
-    margin-left: 150px;
+    padding-left: 150px;
   }
 }
 
 @media screen and (min-width: 1600px) {
   .links {
-    margin-left: 500px;
+    padding-left: 500px;
   }
 }
