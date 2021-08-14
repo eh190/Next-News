@@ -12,7 +12,7 @@ const Science = ({ data }) => {
 
 export const getStaticProps = async () => {
   const res = await fetch(
-    "https://newsapi.org/v2/top-headlines?country=gb&category=science&pageSize=16",
+    "https://newsapi.org/v2/top-headlines?country=gb&category=science&pageSize=17",
     {
       headers: {
         Authorization: `Bearer ${process.env.NEXT_PUBLIC_NEWS_KEY}`,

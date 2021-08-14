@@ -32,6 +32,8 @@ $grey: #999999;
 
   &__date {
     margin-right: 25px;
+    font-weight: 400;
+    font-size: 1rem;
   }
 }
 .links_container {
@@ -53,18 +55,34 @@ $grey: #999999;
     position: relative;
     text-transform: uppercase;
     text-decoration: none;
-
-    padding: 5px;
+    // padding: 5px 5px 0 5px;
+  }
+  // Border bottom animation underline
+  &__item::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: 10%;
+    background: $green;
+    transform: scale(0, 1);
+    transform-origin: 0% 100%;
+    transition: transform 0.3s ease;
   }
 
-  &__item:hover {
-    border-bottom: 2px solid $green;
+  &__item:hover::after {
+    transform: scale(1, 1);
   }
 }
 
+// when clicked, font goes black, underline is permenant
 .active {
   color: #141414;
-  border-bottom: 2px solid $green;
+}
+
+.active::after {
+  transform: scale(1, 1);
 }
 
 @media screen and (min-width: 992px) {

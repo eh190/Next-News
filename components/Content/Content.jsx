@@ -6,8 +6,7 @@ import styles from "./Content.module.scss";
 const Content = (props) => {
   const articles = props.data.articles;
 
-  // const fistStory = articles.shift();
-
+  //Producing normal story sizes removing first story for big story
   const articlesJSX = articles.slice(1).map((article, index) => {
     return (
       <Story

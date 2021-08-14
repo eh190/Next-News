@@ -12,7 +12,7 @@ const Business = ({ data }) => {
 
 export const getStaticProps = async () => {
   const res = await fetch(
-    "https://newsapi.org/v2/top-headlines?country=gb&category=business&pageSize=10",
+    "https://newsapi.org/v2/top-headlines?country=gb&category=business&pageSize=13",
     {
       headers: {
         Authorization: `Bearer ${process.env.NEXT_PUBLIC_NEWS_KEY}`,

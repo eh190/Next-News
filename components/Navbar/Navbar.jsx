@@ -20,20 +20,19 @@ const Navbar = () => {
     <nav className={styles.main}>
       <header className={styles.header}>
         <div className={styles.header__logo}>
-          <Link href="/">
+          <Link href="/" scroll={false}>
             <a>Next News</a>
           </Link>
         </div>
-        <div className={styles.header__date}>
-          <h5>{datetime}</h5>
-        </div>
+        <h5 className={styles.header__date}>{datetime}</h5>
       </header>
       {/* Links data mapped to produce each nav link */}
       <div className={styles.links_container}>
         <ul className={styles.links}>
           {NavCategories.map((category) => {
             return (
-              <Link href={category.url}>
+              // scroll={false} to stop auto scroll to top - makes animations smoother
+              <Link href={category.url} key={category.id} scroll={false}>
                 <a
                   className={`${styles.links__item} ${
                     router.pathname === category.url ? styles.active : ""
