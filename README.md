@@ -9,7 +9,7 @@ A next.js news app which shows a selection of news from around the world in diff
 
 - Created navbar and footer components, and setup index.js as placeholder for all pages.
 - Created Content, Story and BigStory components. I could then style the content, which would act as the workhorse of the app content and just place that into each page, passing the relative data collected in the fetch request.
--The data fetch for each page uses getStaticProps but with an additional condition: revalidate. This means I can rebuild the site at an allotted time (1 hour) to update the news stories, but without having to continually re-render the page for each page request.
+- The data fetch for each page uses getStaticProps but with an additional condition: revalidate. This means I can rebuild the site at an allotted time (1 hour) to update the news stories, but without having to continually re-render the page for each page request.
 - Added Head tags for each page and the app to improve SEO and accessibility.
 
 ## Available Scripts
