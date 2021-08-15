@@ -1,8 +1,16 @@
 import Content from "../components/Content/Content";
+import Head from "next/head";
 
 const Entertainment = ({ data }) => {
   return (
     <main className="main">
+      <Head>
+        <title>Top Entertainment Headlines UK</title>
+        <meta
+          name="description"
+          content="The latest entertainment headlines from the UK"
+        />
+      </Head>
       <h1 className="pageTitle">Entertainment News</h1>
       <hr className="line" />
       <Content data={data} />
@@ -21,7 +29,6 @@ export const getStaticProps = async () => {
   );
 
   const data = await res.json();
-  // console.log(data);
 
   return {
     props: {

@@ -32,7 +32,7 @@ li {
 
 //classes assigned to individual pages structure
 .main {
-  padding: 130px 5px 10px 5px;
+  padding: 160px 5px 10px 5px;
 }
 .pageTitle {
   margin-left: 15px;
@@ -46,18 +46,18 @@ li {
 
 @media screen and (min-width: 992px) {
   .main {
-    padding: 130px 100px 10px 100px;
+    padding: 160px 100px 10px 100px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .main {
-    padding: 130px 150px 10px 150px;
+    padding: 160px 150px 10px 150px;
   }
 }
 
 @media screen and (min-width: 1600px) {
   .main {
-    padding: 130px 500px 10px 500px;
+    padding: 160px 500px 10px 500px;
   }
 }

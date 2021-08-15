@@ -2,6 +2,7 @@ import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Navbar/Navbar";
 import "../styles/globals.scss";
 import { AnimatePresence, motion } from "framer-motion";
+import Head from "next/head";
 
 //variants for animations
 const variants = {
@@ -13,6 +14,9 @@ const variants = {
 function MyApp({ Component, pageProps, router }) {
   return (
     <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
       <Navbar />
       {/* Deals with components animation after they've left react DOM */}
       <AnimatePresence

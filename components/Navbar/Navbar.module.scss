@@ -1,6 +1,6 @@
 $green: #2b7a78;
 $white: #fff;
-$grey: #999999;
+$grey: #666;
 
 .main {
   width: 100%;
@@ -14,6 +14,7 @@ $grey: #999999;
   background: $white;
 }
 
+//Navbar header
 .header {
   display: flex;
   align-items: center;
@@ -36,12 +37,14 @@ $grey: #999999;
     font-size: 1rem;
   }
 }
+//Navbar Links
 .links_container {
   width: 100%;
   padding-right: 20px;
 }
 
 .links {
+  height: 50px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -55,7 +58,7 @@ $grey: #999999;
     position: relative;
     text-transform: uppercase;
     text-decoration: none;
-    // padding: 5px 5px 0 5px;
+    font-size: 1.2rem;
   }
   // Border bottom animation underline
   &__item::after {
@@ -74,11 +77,15 @@ $grey: #999999;
   &__item:hover::after {
     transform: scale(1, 1);
   }
+
+  &__item:hover {
+    cursor: pointer;
+  }
 }
 
 // when clicked, font goes black, underline is permenant
 .active {
-  color: #141414;
+  color: #000;
 }
 
 .active::after {
@@ -88,6 +95,10 @@ $grey: #999999;
 @media screen and (min-width: 992px) {
   .links {
     padding-left: 100px;
+
+    &__item {
+      font-size: 1rem;
+    }
   }
 }
 

@@ -21,10 +21,10 @@ const Story = (props) => {
   return (
     <a href={article.url} target="_blank" rel="noreferrer">
       <div className={styles.card}>
-        <img src={imageSource} alt="" className={styles.card__img} />
+        <img src={imageSource} alt="story image" className={styles.card__img} />
         <div className={styles.card__body}>
-          <h4 className={styles.card__title}>{setTextFiftyChars(title)}</h4>
-          <h6 className={styles.card__author}>{author}</h6>
+          <h3 className={styles.card__title}>{setTextFiftyChars(title)}</h3>
+          <p className={styles.card__author}>{author}</p>
         </div>
       </div>
     </a>

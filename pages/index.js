@@ -1,10 +1,16 @@
 import Head from "next/head";
-import Image from "next/image";
 import Content from "../components/Content/Content";
 
 export default function Home({ data }) {
   return (
     <div className="main">
+      <Head>
+        <title>Top Headlines UK</title>
+        <meta
+          name="description"
+          content="The latest summary of headlines from the UK"
+        />
+      </Head>
       <h1 className="pageTitle">UK</h1>
       <hr className="line" />
       <Content data={data} />
