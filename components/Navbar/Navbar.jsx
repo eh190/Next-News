@@ -20,9 +20,11 @@ const Navbar = () => {
   return (
     <nav className={styles.main}>
       <header className={styles.header}>
-        <div className={styles.header__logo}>
+        <div className={styles.logo_container}>
           <Link href="/" scroll={false}>
-            <a>Next News</a>
+            <a className={styles.logo_link}>
+              <img src="/static/Logo.png" alt="" className={styles.logo} />
+            </a>
           </Link>
         </div>
         <h5 className={styles.header__date}>{datetime}</h5>

@@ -23,19 +23,46 @@ $grey: #666;
   width: 100%;
   background: $green;
 
-  &__logo {
-    font-size: 2rem;
-    margin-left: 20px;
-    display: flex;
-    align-items: center;
-  }
-
   &__date {
     margin-right: 25px;
     font-weight: 400;
     font-size: 1rem;
   }
 }
+
+//Logo
+.logo_container {
+  height: 100%;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.logo_link {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 100px;
+  height: 60px;
+}
+
+// Arrow styling
+.arrow_container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.arrow {
+  color: #333;
+  opacity: 0.4;
+  font-size: 1.8rem;
+}
+
 //Navbar Links
 .links_container {
   width: 100%;
@@ -81,20 +108,6 @@ $grey: #666;
 
 .active::after {
   transform: scale(1, 1);
-}
-
-// Arrow styling
-.arrow_container {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-}
-
-.arrow {
-  color: #333;
-  font-size: 1.8rem;
 }
 
 @media screen and (min-width: 620px) {
