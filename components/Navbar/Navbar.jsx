@@ -23,7 +23,7 @@ const Navbar = () => {
         <div className={styles.logo_container}>
           <Link href="/" scroll={false}>
             <a className={styles.logo_link}>
-              <img src="/static/Logo.png" alt="" className={styles.logo} />
+              <img src="/static/NavLogo.png" alt="" className={styles.logo} />
             </a>
           </Link>
         </div>
