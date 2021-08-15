@@ -4,12 +4,12 @@ A next.js news app which shows a selection of news from around the world in diff
 
 ### Project Links
 
-- [Live site](https://next-news-chi.vercel.app/) -[Design](https://www.figma.com/file/q7KAfbdnGEvaW38EkTdUfg/Next-News?node-id=0%3A1)
+- [Live site](https://next-news-chi.vercel.app/) 
+- [Design](https://www.figma.com/file/q7KAfbdnGEvaW38EkTdUfg/Next-News?node-id=0%3A1)
 
 - Created navbar and footer components, and setup index.js as placeholder for all pages.
-  -Created Content, story and leadstory components, which would act as the workhorse of the app content.
-  I could then style the content, and just place that into each page, passing the relative data collected in the fetch request.
-  -The data fetch for each page uses getStaticProps but with an additional condition revalidate. This means I can rebuild the sit at an allotted time (1 hour) to update the news stories, but without having to continually re-render the page for each page request.
+- Created Content, Story and BigStory components. I could then style the content, which would act as the workhorse of the app content and just place that into each page, passing the relative data collected in the fetch request.
+  -The data fetch for each page uses getStaticProps but with an additional condition: revalidate. This means I can rebuild the site at an allotted time (1 hour) to update the news stories, but without having to continually re-render the page for each page request.
   -Added Head tags for each page and the app to improve SEO and accessibility.
 
 ## Available Scripts
