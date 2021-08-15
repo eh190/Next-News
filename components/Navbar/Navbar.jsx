@@ -3,6 +3,7 @@ import Link from "next/link";
 import styles from "./Navbar.module.scss";
 import { useRouter } from "next/router";
 import NavCategories from "../../navCategories";
+import { CgArrowLongRight, CgArrowLongLeft } from "react-icons/cg";
 
 const Navbar = () => {
   const router = useRouter();
@@ -26,6 +27,10 @@ const Navbar = () => {
         </div>
         <h5 className={styles.header__date}>{datetime}</h5>
       </header>
+      <div className={styles.arrow_container}>
+        <CgArrowLongLeft className={styles.arrow} />
+        <CgArrowLongRight className={styles.arrow} />
+      </div>
       {/* Links data mapped to produce each nav link */}
       <div className={styles.links_container}>
         <ul className={styles.links}>
