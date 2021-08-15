@@ -4,7 +4,7 @@ A next.js news app which shows a selection of news from around the world in diff
 
 ### Project Links
 
-- [Live site]() -[Design]()
+- [Live site](https://next-news-chi.vercel.app/) -[Design](https://www.figma.com/file/q7KAfbdnGEvaW38EkTdUfg/Next-News?node-id=0%3A1)
 
 - Created navbar and footer components, and setup index.js as placeholder for all pages.
   -Created Content, story and leadstory components, which would act as the workhorse of the app content.
