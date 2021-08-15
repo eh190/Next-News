@@ -34,7 +34,7 @@ export const getStaticProps = async () => {
     props: {
       data: data,
     },
-    //Refreshes the fetch every hour to rebuild page with new stories
-    revalidate: 60 * 60,
+    //Refreshes the fetch every 12 hours to rebuild page with new stories
+    revalidate: 60 * 60 * 12,
   };
 };

@@ -6,7 +6,9 @@
   &__line {
     margin: auto;
     width: 90%;
-    color: #333;
+    background-color: #333;
+    height: 1px;
+    border: none;
   }
 
   &__text {
