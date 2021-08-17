@@ -1,8 +1,9 @@
 import React from "react";
+import { Article } from "../../types";
 import styles from "./BigStory.module.scss";
 
 const BigStory = (props) => {
-  const leadStory = props.leadStory;
+  const leadStory: Article = props.leadStory;
 
   //Splitting author from title
   const splitTitle = leadStory.title.split(" - ");
@@ -10,7 +11,7 @@ const BigStory = (props) => {
   const title = splitTitle.join();
 
   //if url exists, use it. If not, use default logo
-  const imageSource =
+  const imageSource: string =
     leadStory.urlToImage === null ? "/static/Logo.png" : leadStory.urlToImage;
 
   return (

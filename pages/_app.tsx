@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar/Navbar";
 import "../styles/globals.scss";
 import { AnimatePresence, motion } from "framer-motion";
 import Head from "next/head";
+import { AppProps } from "next/app";
 
 //variants for animations
 const variants = {
@@ -11,7 +12,7 @@ const variants = {
   exit: { opacity: 0, x: 0, y: -100 },
 };
 
-function MyApp({ Component, pageProps, router }) {
+function MyApp({ Component, pageProps, router }: AppProps) {
   return (
     <>
       <Head>

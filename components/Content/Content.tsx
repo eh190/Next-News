@@ -1,13 +1,14 @@
 import React from "react";
+import { Article, Data } from "../../types";
 import BigStory from "../BigStory/BigStory";
 import Story from "../Story/Story";
 import styles from "./Content.module.scss";
 
-const Content = (props) => {
-  const articles = props.data.articles;
+const Content = (props: Data) => {
+  const articles = props.articles;
 
   //Producing normal story sizes removing first story for big story
-  const articlesJSX = articles.slice(1).map((article, index) => {
+  const articlesJSX = articles.slice(1).map((article: Article, index) => {
     return (
       <Story
         key={article.author + article.source.name + index}
