@@ -11,8 +11,10 @@ const BigStory = (props) => {
   const title = splitTitle.join();
 
   //if url exists, use it. If not, use default logo
-  const imageSource: string =
-    leadStory.urlToImage === null ? "/static/Logo.png" : leadStory.urlToImage;
+  const imageSource =
+    leadStory.urlToImage === null
+      ? "/static/StoryLogo.png"
+      : leadStory.urlToImage;
 
   return (
     <a href={leadStory.url} target="_blank" rel="noreferrer">

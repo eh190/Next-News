@@ -1,26 +1,28 @@
 import Content from "../components/Content/Content";
 import Head from "next/head";
+import { Data } from "../types";
+import { GetStaticProps } from "next";
 
-const Science = ({ data }) => {
+const Business = ({ data }: { data: Data }) => {
   return (
     <main className="main">
       <Head>
-        <title>Top Science Headlines UK</title>
+        <title>Top Business Headlines UK</title>
         <meta
           name="description"
-          content="The latest science headlines from the UK"
+          content="The latest business headlines from the UK"
         />
       </Head>
-      <h1 className="pageTitle">Science News</h1>
+      <h1 className="pageTitle">Business News</h1>
       <hr className="line" />
-      <Content data={data} />
+      <Content {...data} />
     </main>
   );
 };
 
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const res = await fetch(
-    "https://newsapi.org/v2/top-headlines?country=gb&category=science&pageSize=17",
+    "https://newsapi.org/v2/top-headlines?country=gb&category=business&pageSize=13",
     {
       headers: {
         Authorization: `Bearer ${process.env.NEXT_PUBLIC_NEWS_KEY}`,
@@ -39,4 +41,4 @@ export const getStaticProps = async () => {
   };
 };
 
-export default Science;
+export default Business;
