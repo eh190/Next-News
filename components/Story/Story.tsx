@@ -17,7 +17,9 @@ const Story = (props) => {
 
   //if url exists, use it. If not, use default logo
   const imageSource =
-    article.urlToImage === null ? "/static/StoryLogo.png" : article.urlToImage;
+    article.urlToImage === null || article.urlToImage === ""
+      ? "/static/StoryLogo.png"
+      : article.urlToImage;
 
   return (
     <a href={article.url} target="_blank" rel="noreferrer">

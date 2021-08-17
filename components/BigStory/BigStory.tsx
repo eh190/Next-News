@@ -12,7 +12,7 @@ const BigStory = (props) => {
 
   //if url exists, use it. If not, use default logo
   const imageSource =
-    leadStory.urlToImage === null
+    leadStory.urlToImage === null || leadStory.urlToImage === ""
       ? "/static/StoryLogo.png"
       : leadStory.urlToImage;
 
