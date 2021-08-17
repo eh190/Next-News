@@ -10,6 +10,10 @@
     cursor: pointer;
   }
 
+  &:hover .card__title {
+    color: #2b7a78;
+  }
+
   &__img {
     width: 50%;
     object-fit: cover;
@@ -33,6 +37,7 @@
 
   &__author {
     color: #666;
+    font-size: 0.8rem;
   }
 }
 
@@ -63,6 +68,9 @@
   .card {
     &__author {
       font-size: 1rem;
+    }
+    &__title {
+      font-size: 1.2rem;
     }
   }
 }

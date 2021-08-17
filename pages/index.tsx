@@ -1,7 +1,9 @@
+import { GetStaticProps } from "next";
 import Head from "next/head";
 import Content from "../components/Content/Content";
+import { Data } from "../types";
 
-export default function Home({ data }) {
+export default function Home({ data }: { data: Data }) {
   return (
     <div className="main">
       <Head>
@@ -13,12 +15,12 @@ export default function Home({ data }) {
       </Head>
       <h1 className="pageTitle">UK</h1>
       <hr className="line" />
-      <Content data={data} />
+      <Content {...data} />
     </div>
   );
 }
 
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const res = await fetch(
     "https://newsapi.org/v2/top-headlines?country=gb&pageSize=17",
     {

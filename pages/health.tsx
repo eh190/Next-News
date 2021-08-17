@@ -1,7 +1,9 @@
 import Content from "../components/Content/Content";
 import Head from "next/head";
+import { Data } from "../types";
+import { GetStaticProps } from "next";
 
-const Health = ({ data }) => {
+const Health = ({ data }: { data: Data }) => {
   return (
     <main className="main">
       <Head>
@@ -13,12 +15,12 @@ const Health = ({ data }) => {
       </Head>
       <h1 className="pageTitle">Health News</h1>
       <hr className="line" />
-      <Content data={data} />
+      <Content {...data} />
     </main>
   );
 };
 
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const res = await fetch(
     "https://newsapi.org/v2/top-headlines?country=gb&category=health&pageSize=17",
     {
