@@ -3,7 +3,7 @@
   border-radius: 10px;
   display: flex;
   width: 100%;
-  min-height: 10rem;
+  height: 10rem;
 
   &:hover {
     box-shadow: 0 0 5px 2.5px rgb(114, 114, 114);
@@ -14,14 +14,21 @@
     color: #2b7a78;
   }
 
-  &__img {
+  &__imgContainer {
     width: 50%;
-    object-fit: cover;
-    border-radius: 10px 0 0 10px;
+    position: relative;
+
+    &_img {
+      object-fit: cover;
+      width: 100%;
+      border-radius: 10px 0 0 10px;
+      height: 10rem;
+    }
   }
+
   &__body {
     width: 50%;
-    margin: 1rem;
+    margin: 0.5rem;
     flex-grow: 1;
     display: flex;
     justify-content: center;
@@ -47,10 +54,14 @@
     text-align: center;
     height: 300px;
 
-    &__img {
+    &__imgContainer {
       width: 100%;
-      height: 50%;
-      border-radius: 10px 10px 0 0;
+      height: 10rem;
+      &_img {
+        object-fit: cover;
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+      }
     }
 
     &__body {
@@ -60,6 +71,18 @@
 
     &__title {
       font-size: 1rem;
+    }
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .imgContainer {
+    width: 100%;
+    height: 10rem;
+    &_img {
+      object-fit: cover;
+      width: 100%;
+      border-radius: 10px 10px 0 0;
     }
   }
 }

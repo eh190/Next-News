@@ -1,29 +1,36 @@
 import React from "react";
 import { Article } from "../../types";
 import styles from "./BigStory.module.scss";
+import Image from "next/image";
 
 const BigStory = (props) => {
-  const leadStory: Article = props.leadStory;
+  const article: Article = props.leadStory;
 
   //Splitting author from title
-  const splitTitle = leadStory.title.split(" - ");
+  const splitTitle = article.title.split(" - ");
   const author = splitTitle.pop();
   const title = splitTitle.join();
 
   //if url exists, use it. If not, use default logo
   const imageSource =
-    leadStory.urlToImage === null || leadStory.urlToImage === ""
+    article.urlToImage === null || article.urlToImage === ""
       ? "/static/StoryLogo.png"
-      : leadStory.urlToImage;
+      : article.urlToImage;
 
   return (
-    <a href={leadStory.url} target="_blank" rel="noreferrer">
+    <a href={article.url} target="_blank" rel="noreferrer">
       <div className={styles.card}>
-        <img
-          src={imageSource}
-          alt="Lead story image"
-          className={styles.card__img}
-        />
+        <div className={styles.card__imgContainer}>
+          <Image
+            loader={() => imageSource}
+            src={imageSource}
+            unoptimized
+            layout="fill"
+            alt="story image"
+            className={styles.card__imgContainer_img}
+          />
+        </div>
+
         <div className={styles.card__body}>
           <h2 className={styles.card__title}>{title}</h2>
           <p className={styles.card__author}>{author}</p>

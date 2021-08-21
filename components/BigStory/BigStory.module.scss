@@ -13,11 +13,17 @@
     cursor: pointer;
   }
 
-  &__img {
+  &__imgContainer {
     width: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    filter: brightness(50%);
+    position: relative;
+
+    &_img {
+      object-fit: cover;
+      width: 100%;
+      border-radius: 10px;
+      height: 10rem;
+      filter: brightness(50%);
+    }
   }
 
   &__body {

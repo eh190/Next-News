@@ -67,7 +67,7 @@ $grey: #666;
 //Navbar Links
 .links_container {
   width: 100%;
-  padding-right: 20px;
+  padding: 0 20px;
 }
 
 .links {
@@ -76,12 +76,13 @@ $grey: #666;
   justify-content: flex-start;
   align-items: center;
   list-style-type: none;
-  overflow-x: scroll;
+  overflow-x: auto;
+  white-space: nowrap;
   width: 100%;
 
   &__item {
     color: $grey;
-    margin-left: 20px;
+    padding-right: 15px;
     position: relative;
     text-transform: uppercase;
     text-decoration: none;
@@ -122,7 +123,7 @@ $grey: #666;
     padding-left: 100px;
 
     &__item {
-      font-size: 1rem;
+      font-size: 1.2rem;
     }
     &__item:hover::after {
       transform: scale(1, 1);
