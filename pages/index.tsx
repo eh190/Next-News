@@ -21,16 +21,20 @@ export default function Home({ data }: { data: Data }) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch(
-    "https://newsapi.org/v2/top-headlines?country=gb&pageSize=17",
-    {
-      headers: {
-        Authorization: `Bearer ${process.env.NEXT_PUBLIC_NEWS_KEY}`,
-      },
-    }
-  );
-
-  const data = await res.json();
+  let data = {};
+  try {
+    const res = await fetch(
+      "https://newsapi.org/v2/top-headlines?country=gb&pageSize=17",
+      {
+        headers: {
+          Authorization: `Bearer ${process.env.NEXT_PUBLIC_NEWS_KEY}`,
+        },
+      }
+    );
+    data = await res.json();
+  } catch (error) {
+    console.log(error);
+  }
 
   return {
     props: {

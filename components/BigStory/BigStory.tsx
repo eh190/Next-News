@@ -19,7 +19,7 @@ const BigStory = (props) => {
 
   return (
     <a href={article.url} target="_blank" rel="noreferrer">
-      <div className={styles.card}>
+      <article className={styles.card}>
         <div className={styles.card__imgContainer}>
           <Image
             loader={() => imageSource}
@@ -35,7 +35,7 @@ const BigStory = (props) => {
           <h2 className={styles.card__title}>{title}</h2>
           <p className={styles.card__author}>{author}</p>
         </div>
-      </div>
+      </article>
     </a>
   );
 };

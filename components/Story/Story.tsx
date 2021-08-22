@@ -22,7 +22,7 @@ const Story = ({ article }: { article: Article }) => {
 
   return (
     <a href={article.url} target="_blank" rel="noreferrer">
-      <div className={styles.card}>
+      <article className={styles.card}>
         <div className={styles.card__imgContainer}>
           <Image
             loader={() => imageSource}
@@ -37,7 +37,7 @@ const Story = ({ article }: { article: Article }) => {
           <h3 className={styles.card__title}>{setTextToXChars(title, 70)}</h3>
           <p className={styles.card__author}>{author}</p>
         </div>
-      </div>
+      </article>
     </a>
   );
 };

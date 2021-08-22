@@ -21,16 +21,22 @@ const Science = ({ data }: { data: Data }) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch(
-    "https://newsapi.org/v2/top-headlines?country=gb&category=science&pageSize=17",
-    {
-      headers: {
-        Authorization: `Bearer ${process.env.NEXT_PUBLIC_NEWS_KEY}`,
-      },
-    }
-  );
+  let data = {};
 
-  const data = await res.json();
+  try {
+    const res = await fetch(
+      "https://newsapi.org/v2/top-headlines?country=gb&category=science&pageSize=17",
+      {
+        headers: {
+          Authorization: `Bearer ${process.env.NEXT_PUBLIC_NEWS_KEY}`,
+        },
+      }
+    );
+
+    data = await res.json();
+  } catch (error) {
+    console.log(error);
+  }
 
   return {
     props: {

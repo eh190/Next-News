@@ -21,16 +21,21 @@ const Business = ({ data }: { data: Data }) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch(
-    "https://newsapi.org/v2/top-headlines?country=gb&category=business&pageSize=13",
-    {
-      headers: {
-        Authorization: `Bearer ${process.env.NEXT_PUBLIC_NEWS_KEY}`,
-      },
-    }
-  );
+  let data = {};
+  try {
+    const res = await fetch(
+      "https://newsapi.org/v2/top-headlines?country=gb&category=business&pageSize=13",
+      {
+        headers: {
+          Authorization: `Bearer ${process.env.NEXT_PUBLIC_NEWS_KEY}`,
+        },
+      }
+    );
 
-  const data = await res.json();
+    data = await res.json();
+  } catch (error) {
+    console.log(error);
+  }
 
   return {
     props: {
