@@ -5,7 +5,7 @@ import { Data } from "../types";
 
 export default function Home({ data }: { data: Data }) {
   return (
-    <div className="main">
+    <>
       <Head>
         <title>Top Headlines UK</title>
         <meta
@@ -13,10 +13,8 @@ export default function Home({ data }: { data: Data }) {
           content="The latest summary of headlines from the UK"
         />
       </Head>
-      <h1 className="pageTitle">UK</h1>
-      <hr className="line" />
       <Content {...data} />
-    </div>
+    </>
   );
 }
 

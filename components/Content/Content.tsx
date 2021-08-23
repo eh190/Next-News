@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import React from "react";
 import { Article, Data } from "../../types";
 import BigStory from "../BigStory/BigStory";
@@ -6,6 +7,7 @@ import styles from "./Content.module.scss";
 
 const Content = (props: Data) => {
   const articles = props.articles;
+  const router = useRouter();
 
   //Producing normal story sizes removing first story for big story
   const articlesJSX = articles.slice(1).map((article: Article, index) => {
@@ -17,13 +19,21 @@ const Content = (props: Data) => {
     );
   });
 
+  //Retrieve section title from url
+  const getSectionTitle = () => {
+    const category = router.pathname.substring(1);
+    return router.pathname != "/" ? `${category} News` : "UK News";
+  };
+
   return (
-    <>
+    <main className={styles.main}>
+      <h1 className={styles.pageTitle}>{getSectionTitle()}</h1>
+      <hr className={styles.line} />
       <div className={styles.container}>
         <BigStory leadStory={articles[0]} />
         <div className={styles.grid}>{articlesJSX}</div>
       </div>
-    </>
+    </main>
   );
 };
 

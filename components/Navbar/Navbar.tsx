@@ -4,18 +4,23 @@ import styles from "./Navbar.module.scss";
 import { useRouter } from "next/router";
 import NavCategories from "../../navCategories";
 import { CgArrowLongRight, CgArrowLongLeft } from "react-icons/cg";
+import { getAllJSDocTags } from "typescript";
 
 const Navbar = () => {
   const router = useRouter();
 
-  //Get current data and time
-  let currentdate = new Date();
-  let datetime =
-    currentdate.getDate() +
-    "/" +
-    (currentdate.getMonth() + 1) +
-    "/" +
-    currentdate.getFullYear();
+  //Get current date
+  const getDate = () => {
+    let currentdate = new Date();
+
+    let datetime =
+      currentdate.getDate() +
+      "/" +
+      (currentdate.getMonth() + 1) +
+      "/" +
+      currentdate.getFullYear();
+    return datetime;
+  };
 
   return (
     <nav className={styles.main}>
@@ -27,7 +32,7 @@ const Navbar = () => {
             </a>
           </Link>
         </div>
-        <h5 className={styles.header__date}>{datetime}</h5>
+        <h5 className={styles.header__date}>{getDate()}</h5>
       </header>
       <div className={styles.arrow_container}>
         <CgArrowLongLeft className={styles.arrow} />

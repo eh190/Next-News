@@ -29,37 +29,3 @@ a {
 li {
   list-style: none;
 }
-
-//classes assigned to individual pages structure
-.main {
-  padding: 160px 5px 10px 5px;
-}
-.pageTitle {
-  margin-left: 15px;
-  padding-bottom: 10px;
-}
-
-.line {
-  margin: 0px 15px;
-  height: 1px;
-  background-color: #333;
-  border: none;
-}
-
-@media screen and (min-width: 992px) {
-  .main {
-    padding: 160px 100px 10px 100px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .main {
-    padding: 160px 250px 10px 250px;
-  }
-}
-
-@media screen and (min-width: 1600px) {
-  .main {
-    padding: 160px 500px 10px 500px;
-  }
-}

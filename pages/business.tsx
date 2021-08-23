@@ -5,7 +5,7 @@ import { GetStaticProps } from "next";
 
 const Business = ({ data }: { data: Data }) => {
   return (
-    <main className="main">
+    <>
       <Head>
         <title>Top Business Headlines UK</title>
         <meta
@@ -13,10 +13,8 @@ const Business = ({ data }: { data: Data }) => {
           content="The latest business headlines from the UK"
         />
       </Head>
-      <h1 className="pageTitle">Business News</h1>
-      <hr className="line" />
       <Content {...data} />
-    </main>
+    </>
   );
 };
 

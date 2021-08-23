@@ -5,7 +5,7 @@ import { GetStaticProps } from "next";
 
 const Science = ({ data }: { data: Data }) => {
   return (
-    <main className="main">
+    <>
       <Head>
         <title>Top Science Headlines UK</title>
         <meta
@@ -13,10 +13,8 @@ const Science = ({ data }: { data: Data }) => {
           content="The latest science headlines from the UK"
         />
       </Head>
-      <h1 className="pageTitle">Science News</h1>
-      <hr className="line" />
       <Content {...data} />
-    </main>
+    </>
   );
 };
 
