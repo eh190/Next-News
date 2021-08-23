@@ -14,6 +14,12 @@ A next.js news app which shows a selection of news from around the world in diff
 - The data fetch for each page uses getStaticProps but with an additional condition: revalidate. This means I can rebuild the site at an allotted time to update the news stories, but without having to continually re-render the page for each page request. In practise, using getServerSideProps would be more appropriate, but I wanted to restrict the amount of API calls made by the app.
 - Added Head tags for each page and the app to improve SEO and accessibility.
 
+### Cloning the project
+
+- Run "git clone {repo url}" in your terminal.
+- Open up the project and run "npm install" to install packages.
+- You will also need to get your own apikey from the [News API](https://newsapi.org/), and add a .env file in the root of the project. Inside this file, add a variable "NEXT_PUBLIC_NEWS_KEY={yourKey}". Then the data fetch will work!
+
 ## Available Scripts
 
 In the project directory, you can run:
