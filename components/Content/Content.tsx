@@ -5,6 +5,9 @@ import BigStory from "../BigStory/BigStory";
 import Story from "../Story/Story";
 import styles from "./Content.module.scss";
 
+//The central point of the app. Content handles all data passed by pages
+// and displays the news stories
+
 const Content = (props: Data) => {
   const articles = props.articles;
   const router = useRouter();

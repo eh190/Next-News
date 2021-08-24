@@ -4,23 +4,10 @@ import styles from "./Navbar.module.scss";
 import { useRouter } from "next/router";
 import NavCategories from "../../navCategories";
 import { CgArrowLongRight, CgArrowLongLeft } from "react-icons/cg";
-import { getAllJSDocTags } from "typescript";
+import { getDate } from "../../functions/functions";
 
 const Navbar = () => {
   const router = useRouter();
-
-  //Get current date
-  const getDate = () => {
-    let currentdate = new Date();
-
-    let datetime =
-      currentdate.getDate() +
-      "/" +
-      (currentdate.getMonth() + 1) +
-      "/" +
-      currentdate.getFullYear();
-    return datetime;
-  };
 
   return (
     <nav className={styles.main}>

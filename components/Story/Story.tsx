@@ -2,13 +2,9 @@ import React from "react";
 import { Article } from "../../types";
 import styles from "./Story.module.scss";
 import Image from "next/image";
+import { setTextToXChars } from "../../functions/functions";
 
 const Story = ({ article }: { article: Article }) => {
-  //function setting a string to show first X characters
-  const setTextToXChars = (string: string, length: number) => {
-    return string.length > length ? string.substring(0, 70) + "..." : string;
-  };
-
   //Splitting author from title
   const splitTitle = article.title.split(" - ");
   const author = splitTitle.pop();
