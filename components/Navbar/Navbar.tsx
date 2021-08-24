@@ -25,10 +25,14 @@ const Navbar = () => {
   return (
     <nav className={styles.main}>
       <header className={styles.header}>
-        <div className={styles.logo_container}>
+        <div className={styles.header__logo_container}>
           <Link href="/" scroll={false}>
-            <a className={styles.logo_link}>
-              <img src="/static/NavLogo.png" alt="" className={styles.logo} />
+            <a className={styles.header__logo_link}>
+              <img
+                src="/static/NavLogo.png"
+                alt=""
+                className={styles.header__logo}
+              />
             </a>
           </Link>
         </div>

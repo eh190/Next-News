@@ -1,0 +1,36 @@
+@import "variables";
+
+//576px
+@mixin lg-mobiles() {
+  @media (min-width: $screen-sm-min) {
+    @content;
+  }
+}
+
+//768px
+@mixin tablets() {
+  @media (min-width: $screen-md-min) {
+    @content;
+  }
+}
+
+//992px
+@mixin sm-desktop() {
+  @media (min-width: $screen-lg-min) {
+    @content;
+  }
+}
+
+//1200px
+@mixin desktop() {
+  @media (min-width: $screen-xl-min) {
+    @content;
+  }
+}
+
+//1600px
+@mixin lg-desktop() {
+  @media (min-width: $screen-xxl-min) {
+    @content;
+  }
+}

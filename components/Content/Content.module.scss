@@ -1,24 +1,42 @@
+@import "../../styles/variables";
+@import "../../styles//mixins";
+
 .main {
   padding: 160px 5px 10px 5px;
-}
 
-.pageTitle {
-  text-transform: capitalize;
-  margin-left: 15px;
-  padding-bottom: 10px;
-}
+  //992px
+  @include sm-desktop() {
+    padding: 160px 100px 10px 100px;
+  }
 
-.line {
-  margin: 0px 15px;
-  height: 1px;
-  background-color: #333;
-  border: none;
-}
+  //1200px
+  @include desktop() {
+    padding: 160px 250px 10px 250px;
+  }
 
-.container {
-  margin: 25px 15px;
-  display: flex;
-  flex-direction: column;
+  //1600px
+  @include lg-desktop() {
+    padding: 160px 500px 10px 500px;
+  }
+
+  &__pageTitle {
+    text-transform: capitalize;
+    margin-left: 15px;
+    padding-bottom: 10px;
+  }
+
+  &__line {
+    margin: 0px 15px;
+    height: 1px;
+    background-color: $dark-grey;
+    border: none;
+  }
+
+  &__container {
+    margin: 25px 15px;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .grid {
@@ -26,37 +44,19 @@
   gap: 1rem;
   grid-template-columns: 1fr;
   justify-content: center;
-}
 
-@media screen and (min-width: 576px) {
-  .grid {
+  //576px
+  @include lg-mobiles() {
     grid-template-columns: repeat(2, 1fr);
   }
-}
 
-@media screen and (min-width: 768px) {
-  .grid {
+  //768px
+  @include tablets() {
     grid-template-columns: repeat(3, 1fr);
   }
-}
 
-@media screen and (min-width: 992px) {
-  .main {
-    padding: 160px 100px 10px 100px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .main {
-    padding: 160px 250px 10px 250px;
-  }
-  .grid {
+  //1200px
+  @include desktop() {
     gap: 1.5rem;
-  }
-}
-
-@media screen and (min-width: 1600px) {
-  .main {
-    padding: 160px 500px 10px 500px;
   }
 }

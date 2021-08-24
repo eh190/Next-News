@@ -27,9 +27,9 @@ const Content = (props: Data) => {
 
   return (
     <main className={styles.main}>
-      <h1 className={styles.pageTitle}>{getSectionTitle()}</h1>
-      <hr className={styles.line} />
-      <div className={styles.container}>
+      <h1 className={styles.main__pageTitle}>{getSectionTitle()}</h1>
+      <hr className={styles.main__line} />
+      <div className={styles.main__container}>
         <BigStory leadStory={articles[0]} />
         <div className={styles.grid}>{articlesJSX}</div>
       </div>

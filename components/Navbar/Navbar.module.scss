@@ -1,6 +1,5 @@
-$green: #2b7a78;
-$white: #fff;
-$grey: #666;
+@import "../../styles/variables";
+@import "../../styles/mixins";
 
 .main {
   width: 100%;
@@ -22,31 +21,31 @@ $grey: #666;
   justify-content: space-between;
   height: 80px;
   width: 100%;
-  background: $green;
+  background: $primary-color;
 
   &__date {
     margin-right: 25px;
     font-weight: 400;
     font-size: 1rem;
   }
-}
 
-//Logo
-.logo_container {
-  height: 100%;
-  margin-left: 20px;
-  display: flex;
-  align-items: center;
-}
+  //LOGO
+  &__logo_container {
+    height: 100%;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+  }
 
-.logo_link {
-  display: flex;
-  align-items: center;
-}
+  &__logo_link {
+    display: flex;
+    align-items: center;
+  }
 
-.logo {
-  width: 100px;
-  height: 60px;
+  &__logo {
+    width: 100px;
+    height: 60px;
+  }
 }
 
 // Arrow styling
@@ -56,10 +55,15 @@ $grey: #666;
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
+
+  //576px
+  @include lg-mobiles() {
+    display: none;
+  }
 }
 
 .arrow {
-  color: #333;
+  color: $dark-grey;
   opacity: 0.4;
   font-size: 1.8rem;
 }
@@ -80,8 +84,23 @@ $grey: #666;
   white-space: nowrap;
   width: 100%;
 
+  //992px
+  @include sm-desktop() {
+    padding-left: 100px;
+  }
+
+  //1200px
+  @include desktop() {
+    padding-left: 250px;
+  }
+
+  //1600px
+  @include lg-desktop() {
+    padding-left: 500px;
+  }
+
   &__item {
-    color: $grey;
+    color: $secondary-color;
     padding-right: 15px;
     position: relative;
     text-transform: uppercase;
@@ -96,10 +115,17 @@ $grey: #666;
     height: 2px;
     left: 0;
     bottom: 10%;
-    background: $green;
+    background: $primary-color;
     transform: scale(0, 1);
     transform-origin: 0% 100%;
     transition: transform 0.3s ease;
+  }
+
+  &__item:hover::after {
+    //992px
+    @include sm-desktop() {
+      transform: scale(1, 1);
+    }
   }
 }
 
@@ -110,39 +136,4 @@ $grey: #666;
 
 .active::after {
   transform: scale(1, 1);
-}
-
-@media screen and (min-width: 620px) {
-  .arrow_container {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .links {
-    padding-left: 100px;
-
-    &__item {
-      font-size: 1.2rem;
-    }
-    &__item:hover::after {
-      transform: scale(1, 1);
-    }
-
-    &__item:hover {
-      cursor: pointer;
-    }
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .links {
-    padding-left: 250px;
-  }
-}
-
-@media screen and (min-width: 1600px) {
-  .links {
-    padding-left: 500px;
-  }
 }
