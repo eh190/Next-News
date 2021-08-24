@@ -81,6 +81,8 @@
   align-items: center;
   list-style-type: none;
   overflow-x: auto;
+  //Remove scrollbar visibility on Firefox
+  scrollbar-width: none;
   white-space: nowrap;
   width: 100%;
 
@@ -127,6 +129,12 @@
       transform: scale(1, 1);
     }
   }
+}
+
+// Remove scrollbar visibility
+/* Works on Chrome, Edge, and Safari */
+.links::-webkit-scrollbar {
+  display: none;
 }
 
 // when clicked, font goes black, underline is permenant

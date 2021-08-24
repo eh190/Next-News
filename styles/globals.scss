@@ -6,14 +6,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  //Remove scrollbar visibility on Firefox
-  scrollbar-width: none;
-}
-
-// Remove scrollbar visibility
-/* Works on Chrome, Edge, and Safari */
-*::-webkit-scrollbar {
-  display: none;
 }
 
 body {
