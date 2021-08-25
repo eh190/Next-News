@@ -1,11 +1,11 @@
 //function setting a string to show first X characters
 export const setTextToXChars = (string: string, length: number) => {
   if (length <= 0) return string;
-  return string != null
-    ? string.length > length
-      ? string.substring(0, length) + "..."
-      : string
-    : "";
+  return !string
+    ? ""
+    : string.length > length
+    ? string.substring(0, length) + "..."
+    : string;
 };
 
 //Get current date

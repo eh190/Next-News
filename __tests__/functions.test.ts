@@ -26,4 +26,16 @@ describe("setTextToXChars function", () => {
     const result = setTextToXChars(null, 10);
     expect(result).toBe("");
   });
+
+  it("Should return an empty string if string is empty", () => {
+    const result = setTextToXChars("", 10);
+    expect(result).toBe("");
+  });
+
+  it("Should return the string if length is > the length of the string", () => {
+    const result = setTextToXChars(mockData.articles[0].title, 500);
+    expect(result).toBe(
+      "Extinction Rebellion London protests – live: Activists block roads around Parliament on second day of action - The Independent"
+    );
+  });
 });
