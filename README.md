@@ -4,7 +4,6 @@ A next.js news app which shows a selection of news from around the world in diff
 
 ### Project Links
 
-- [Live site](https://next-news-chi.vercel.app/)
 - [Design](https://www.figma.com/file/q7KAfbdnGEvaW38EkTdUfg/Next-News?node-id=0%3A1)
 
 ### The Project
